@@ -11,4 +11,6 @@ class Company {
     String fax
     String parentCompany
     String noOfEmployees
+    Date dateCreated
+    Date lastUpdated
 }
