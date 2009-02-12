@@ -1,4 +1,5 @@
 class Company {
+    static hasMany = [answers:Answer]
     String name
     String address1
     String address2
