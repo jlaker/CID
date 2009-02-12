@@ -1,0 +1,3 @@
+class Survey {
+      String name
+}
