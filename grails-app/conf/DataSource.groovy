@@ -13,8 +13,12 @@ hibernate {
 environments {
 	development {
 		dataSource {
+            pooled = true
+	        driverClassName = "com.mysql.jdbc.Driver"
+	        username = "root"
+	        password = "1596"
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:hsqldb:mem:devDB"
+			url = "jdbc:mysql://localhost:3306/CID"
 		}
 	}
 	test {
