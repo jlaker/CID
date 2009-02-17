@@ -237,20 +237,6 @@
         <entry key="$PROJECT_DIR$">
           <value>
             <SvnBranchConfiguration>
-              <option name="branchMap">
-                <map>
-                  <entry key="http://svn.sourcemedia.com:8098/svn/repository/projects/CID/branches">
-                    <value>
-                      <list />
-                    </value>
-                  </entry>
-                  <entry key="http://svn.sourcemedia.com:8098/svn/repository/projects/CID/tags">
-                    <value>
-                      <list />
-                    </value>
-                  </entry>
-                </map>
-              </option>
               <option name="branchUrls">
                 <list>
                   <option value="http://svn.sourcemedia.com:8098/svn/repository/projects/CID/branches" />

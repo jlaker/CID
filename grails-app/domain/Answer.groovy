@@ -1,6 +1,8 @@
 class Answer {
-    static belongsTo = [question:Question]
-    static hasMany = [executives:Executive]
+    static belongsTo = Question
+    static hasMany = [executives: Executive]
+    Company company
+    Question question
     Contact contact
     String answer
     Date dateCreated
