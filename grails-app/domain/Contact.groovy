@@ -1,6 +1,4 @@
 class Contact {
-    static belongsTo = Answer
-    Answer answer
     String completedBy
     String title
     String email

@@ -48,13 +48,6 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Answer:</td>
-
-                <td valign="top" class="value"><g:link controller="answer" action="show" id="${contactInstance?.answer?.id}">${contactInstance?.answer?.encodeAsHTML()}</g:link></td>
-
-            </tr>
-
-            <tr class="prop">
                 <td valign="top" class="name">Completed By:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'completedBy')}</td>

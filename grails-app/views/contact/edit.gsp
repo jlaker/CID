@@ -55,15 +55,6 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="answer">Answer:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'answer', 'errors')}">
-                        <g:select optionKey="id" from="${Answer.list()}" name="answer.id" value="${contactInstance?.answer?.id}"></g:select>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
                         <label for="completedBy">Completed By:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'completedBy', 'errors')}">

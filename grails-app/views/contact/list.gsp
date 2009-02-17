@@ -27,9 +27,9 @@
 
                 <g:sortableColumn property="altPhone" title="Alt Phone"/>
 
-                <th>Answer</th>
-
                 <g:sortableColumn property="completedBy" title="Completed By"/>
+
+                <g:sortableColumn property="dateCreated" title="Date Created"/>
 
             </tr>
             </thead>
@@ -45,9 +45,9 @@
 
                     <td>${fieldValue(bean: contactInstance, field: 'altPhone')}</td>
 
-                    <td>${fieldValue(bean: contactInstance, field: 'answer')}</td>
-
                     <td>${fieldValue(bean: contactInstance, field: 'completedBy')}</td>
+
+                    <td>${fieldValue(bean: contactInstance, field: 'dateCreated')}</td>
 
                 </tr>
             </g:each>

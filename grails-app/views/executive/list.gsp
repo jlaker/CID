@@ -21,8 +21,6 @@
 
                 <g:sortableColumn property="id" title="Id"/>
 
-                <th>Answer</th>
-
                 <g:sortableColumn property="dept" title="Dept"/>
 
                 <g:sortableColumn property="email" title="Email"/>
@@ -30,6 +28,8 @@
                 <g:sortableColumn property="firstName" title="First Name"/>
 
                 <g:sortableColumn property="lastName" title="Last Name"/>
+
+                <g:sortableColumn property="title" title="Title"/>
 
             </tr>
             </thead>
@@ -39,8 +39,6 @@
 
                     <td><g:link action="show" id="${executiveInstance.id}">${fieldValue(bean: executiveInstance, field: 'id')}</g:link></td>
 
-                    <td>${fieldValue(bean: executiveInstance, field: 'answer')}</td>
-
                     <td>${fieldValue(bean: executiveInstance, field: 'dept')}</td>
 
                     <td>${fieldValue(bean: executiveInstance, field: 'email')}</td>
@@ -48,6 +46,8 @@
                     <td>${fieldValue(bean: executiveInstance, field: 'firstName')}</td>
 
                     <td>${fieldValue(bean: executiveInstance, field: 'lastName')}</td>
+
+                    <td>${fieldValue(bean: executiveInstance, field: 'title')}</td>
 
                 </tr>
             </g:each>
