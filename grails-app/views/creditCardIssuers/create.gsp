@@ -2,15 +2,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="layout" content="main"/>
-    <title>Create CreditCardIssuers</title>
+    <title>Credit Card Issuers Survey</title>
 </head>
 <body>
-<div class="nav">
+<!--<div class="nav">
     <span class="menuButton"><a class="home" href="${createLinkTo(dir: '')}">Home</a></span>
     <span class="menuButton"><g:link class="list" action="list">CreditCardIssuers List</g:link></span>
-</div>
+</div>-->
 <div class="body">
-    <h1>Create CreditCardIssuers</h1>
+    <h1 align="center"><b>21st Edition</b></h1>
+    <center><a href="http://www.cardindustrydirectory.com">www.cardindustrydirectory.com</a></center>
+    <h1 align="center"><b>Credit Card Issuers Survey</b></h1>
     <g:if test="${flash.message}">
         <div class="message">${flash.message}</div>
     </g:if>
@@ -19,24 +21,82 @@
             <g:renderErrors bean="${creditCardIssuersInstance}" as="list"/>
         </div>
     </g:hasErrors>
-    <g:hasErrors bean="${contactInstance}">
-        <div class="errors">
-            <g:renderErrors bean="${contactInstance}" as="list"/>
-        </div>
-    </g:hasErrors>
-    <g:hasErrors bean="${companyInstance}">
-        <div class="errors">
-            <g:renderErrors bean="${companyInstance}" as="list"/>
-        </div>
-    </g:hasErrors>
     <g:form action="save" method="post">
+        <input type="hidden" name="company.id" value="${creditCardIssuersInstance?.company?.id}"/>
         <div class="dialog">
+
             <table>
                 <tbody>
+                <tr>
+                    <td colspan="3">
+                        Please complete the survey by <b>April 4th 2008</b>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tbody>
+                            <tr class="prop">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.name', 'errors')}">
+                                    <label for="company.name">Company:</label><br><input type="text" id="company.name" name="company.name" value="${creditCardIssuersInstance?.company?.name}"/><!--fieldValue(bean: creditCardIssuersInstance, field: 'name')-->
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.parentCompany', 'errors')}">
+                                    <label for="company.parentCompany">Parent Company:</label><br><input type="text" id="company.parentCompany" name="company.parentCompany" value="${creditCardIssuersInstance?.company?.parentCompany}"/><!--fieldValue(bean: creditCardIssuersInstance, field: 'parentCompany') -->
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.address1', 'errors')}">
+                                    <label for="company.address1">Address1:</label><br><input type="text" id="company.address1" name="company.address1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.address1')}"/>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.address2', 'errors')}">
+                                    <label for="company.address2">Address2:</label><br><input type="text" id="company.address2" name="company.address2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.address2')}"/>
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.city', 'errors')}">
+                                    <label for="company.city">City:</label><br><input type="text" id="company.city" name="company.city" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.city')}"/>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'compnay.state', 'errors')}">
+                                    <label for="company.state">State:</label><br><input type="text" id="company.state" name="company.state" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.state')}"/>
+                                </td>
+                            </tr>
+                            <tr class="prop">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.zip', 'errors')}">
+                                    <label for="company.zip">Zip:</label><br><input type="text" id="company.zip" name="company.zip" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.zip')}"/>
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.phone', 'errors')}">
+                                    <label for="company.phone">Phone:</label><br><input type="text" id="company.phone" name="company.phone" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.phone')}"/>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.fax', 'errors')}">
+                                    <label for="company.fax">Fax:</label><br><input type="text" id="company.fax" name="company.fax" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.fax')}"/>
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.noOfEmployees', 'errors')}">
+                                    <label for="company.noOfEmployees">No Of Employees:</label><br><input type="text" id="company.noOfEmployees" name="company.noOfEmployees" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.noOfEmployees')}"/>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.url', 'errors')}">
+                                    <label for="company.url">Url:</label><br><input type="text" id="company.url" name="company.url" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.url')}"/>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td align="center"><b>Card Accounts</b></td>
+                    <td align="center"><b>2008</b></td>
+                </tr>
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="AAtotalOPENcardholderAccounts">AA total OPEN cardholder Accounts:</label>
+                        <label for="AAtotalOPENcardholderAccounts">Total OPEN cardholder accounts (not cards) at <u>year end</u>:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AAtotalOPENcardholderAccounts', 'errors')}">
                         <input type="text" id="AAtotalOPENcardholderAccounts" name="AAtotalOPENcardholderAccounts" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AAtotalOPENcardholderAccounts')}"/>
@@ -45,7 +105,7 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="ABtotalACTIVEcardholderAccounts">AB total ACTIVE cardholder Accounts:</label>
+                        <label for="ABtotalACTIVEcardholderAccounts">Total ACTIVE cardholder accounts (not cards) at <u>yeat end</u>:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'ABtotalACTIVEcardholderAccounts', 'errors')}">
                         <input type="text" id="ABtotalACTIVEcardholderAccounts" name="ABtotalACTIVEcardholderAccounts" value="${fieldValue(bean: creditCardIssuersInstance, field: 'ABtotalACTIVEcardholderAccounts')}"/>
@@ -106,6 +166,12 @@
                     </td>
                 </tr>
 
+                <tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+                <tr align="center">
+                    <td align="center"><b>Affinity/Co-Branded Cards</b></td>
+                    <td align="center"></td>
+                </tr>
+
                 <tr class="prop">
                     <td valign="top" class="name">
                         <label for="AIaffinityCo_brandedCardPrograms">AI affinity Cobranded Card Programs:</label>
@@ -160,6 +226,7 @@
                     </td>
                 </tr>
 
+
                 <tr class="prop">
                     <td valign="top" class="name">
                         <label for="AOVISAaffinityCo_brandedCards">AOVISA affinity Cobranded Cards:</label>
@@ -205,6 +272,13 @@
                     </td>
                 </tr>
 
+                <tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+                <tr align="center">
+                    <td align="center"><b>Contactless Cards</b></td>
+                    <td align="center"></td>
+                </tr>
+
+
                 <tr class="prop">
                     <td valign="top" class="name">
                         <label for="ATcontactlessCreditCards">AT contactless Credit Cards:</label>
@@ -212,6 +286,11 @@
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'ATcontactlessCreditCards', 'errors')}">
                         <g:checkBox name="ATcontactlessCreditCards" value="${creditCardIssuersInstance?.ATcontactlessCreditCards}"></g:checkBox>
                     </td>
+                </tr>
+
+                <tr align="center">
+                    <td align="center"></td>
+                    <td align="center"><b>2008</b></td>
                 </tr>
 
                 <tr class="prop">
@@ -232,358 +311,175 @@
                     </td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="AWcontactlessCreditCardBrand1">AW contactless Credit Card Brand1:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AWcontactlessCreditCardBrand1', 'errors')}">
-                        <input type="text" id="AWcontactlessCreditCardBrand1" name="AWcontactlessCreditCardBrand1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AWcontactlessCreditCardBrand1')}"/>
-                    </td>
+
+                <tr align="center">
+                    <td align="center"></td>
+                    <td align="center"><b>Brand 1</b></td>
+                    <td align="center"><b>Brand 2</b></td>
                 </tr>
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="AXcontactlessCreditCardBrand2">AX contactless Credit Card Brand2:</label>
+                        <label for="AWcontactlessCreditCardBrand1">Contactless credit card brand issued:</label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AWcontactlessCreditCardBrand1', 'errors')}">
+                        <input type="text" id="AWcontactlessCreditCardBrand1" name="AWcontactlessCreditCardBrand1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AWcontactlessCreditCardBrand1')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AXcontactlessCreditCardBrand2', 'errors')}">
                         <input type="text" id="AXcontactlessCreditCardBrand2" name="AXcontactlessCreditCardBrand2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AXcontactlessCreditCardBrand2')}"/>
                     </td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="AYformFactor1">AY form Factor1:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AYformFactor1', 'errors')}">
-                        <input type="text" id="AYformFactor1" name="AYformFactor1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AYformFactor1')}"/>
-                    </td>
+                <tr align="center" class="prop">
+                    <td align="center"></td>
+                    <td align="center"><b>Form Factor 1</b></td>
+                    <td align="center"><b>Form Factor 2</b></td>
                 </tr>
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="AZformFactor2">AZ form Factor2:</label>
+                        <label for="AYformFactor1">Form factor: (i.e. card, key fob)</label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AYformFactor1', 'errors')}">
+                        <input type="text" id="AYformFactor1" name="AYformFactor1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AYformFactor1')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AZformFactor2', 'errors')}">
                         <input type="text" id="AZformFactor2" name="AZformFactor2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AZformFactor2')}"/>
                     </td>
                 </tr>
-
                 <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="BAformFactor3">BA form Factor3:</label>
-                    </td>
+                    <td align="center"></td>
+                    <td align="center"><b>Form Factor 3</b></td>
+                </tr>
+                <tr align="center">
+                    <td></td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'BAformFactor3', 'errors')}">
                         <input type="text" id="BAformFactor3" name="BAformFactor3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'BAformFactor3')}"/>
                     </td>
                 </tr>
 
+                <tr><td></td><td></td></tr><tr><td></td><td></td></tr>
 
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="address1">Address1:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'address1', 'errors')}">
-                        <input type="text" id="address1" name="address1" value="${fieldValue(bean: companyInstance, field: 'address1')}"/>
-                    </td>
+                <tr align="center">
+                    <td align="center" colspan="3" width="300px"><b>Executives: (Please list your top 5 executives and their titles)</b></td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="address2">Address2:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'address2', 'errors')}">
-                        <input type="text" id="address2" name="address2" value="${fieldValue(bean: companyInstance, field: 'address2')}"/>
-                    </td>
+                <tr><td colspan="3"><table><tbody>
+
+                <tr align="center">
+                    <th align="center">Name</th>
+                    <th align="center">Title</th>
+                    <th align="center">Department</th>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="city">City:</label>
+                <tr>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName1', 'errors')}">
+                        <input type="text" id="executiveName1" name="executiveName1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName1')}"/>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'city', 'errors')}">
-                        <input type="text" id="city" name="city" value="${fieldValue(bean: companyInstance, field: 'city')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="fax">Fax:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'fax', 'errors')}">
-                        <input type="text" id="fax" name="fax" value="${fieldValue(bean: companyInstance, field: 'fax')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="name">Name:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'name', 'errors')}">
-                        <input type="text" id="name" name="name" value="${fieldValue(bean: companyInstance, field: 'name')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="noOfEmployees">No Of Employees:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'noOfEmployees', 'errors')}">
-                        <input type="text" id="noOfEmployees" name="noOfEmployees" value="${fieldValue(bean: companyInstance, field: 'noOfEmployees')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="parentCompany">Parent Company:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'parentCompany', 'errors')}">
-                        <input type="text" id="parentCompany" name="parentCompany" value="${fieldValue(bean: companyInstance, field: 'parentCompany')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="phone">Phone:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'phone', 'errors')}">
-                        <input type="text" id="phone" name="phone" value="${fieldValue(bean: companyInstance, field: 'phone')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="state">State:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'state', 'errors')}">
-                        <input type="text" id="state" name="state" value="${fieldValue(bean: companyInstance, field: 'state')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="url">Url:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'url', 'errors')}">
-                        <input type="text" id="url" name="url" value="${fieldValue(bean: companyInstance, field: 'url')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="zip">Zip:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'zip', 'errors')}">
-                        <input type="text" id="zip" name="zip" value="${fieldValue(bean: companyInstance, field: 'zip')}"/>
-                    </td>
-                </tr>
-
-
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="altEmail">Alt Email:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'altEmail', 'errors')}">
-                        <input type="text" id="altEmail" name="altEmail" value="${fieldValue(bean: contactInstance, field: 'altEmail')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="altName">Alt Name:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'altName', 'errors')}">
-                        <input type="text" id="altName" name="altName" value="${fieldValue(bean: contactInstance, field: 'altName')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="altPhone">Alt Phone:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'altPhone', 'errors')}">
-                        <input type="text" id="altPhone" name="altPhone" value="${fieldValue(bean: contactInstance, field: 'altPhone')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="completedBy">Completed By:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'completedBy', 'errors')}">
-                        <input type="text" id="completedBy" name="completedBy" value="${fieldValue(bean: contactInstance, field: 'completedBy')}"/>
-                    </td>
-                </tr> >
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="email">Email:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'email', 'errors')}">
-                        <input type="text" id="email" name="email" value="${fieldValue(bean: contactInstance, field: 'email')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="fax">Fax:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'fax', 'errors')}">
-                        <input type="text" id="fax" name="fax" value="${fieldValue(bean: contactInstance, field: 'fax')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="phone">Phone:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'phone', 'errors')}">
-                        <input type="text" id="phone" name="phone" value="${fieldValue(bean: contactInstance, field: 'phone')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="title">Title:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'title', 'errors')}">
-                        <input type="text" id="title" name="title" value="${fieldValue(bean: contactInstance, field: 'title')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveDept1">Executive Dept1:</label>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle1', 'errors')}">
+                        <input type="text" id="executiveTitle1" name="executiveTitle1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle1')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveDept1', 'errors')}">
                         <input type="text" id="executiveDept1" name="executiveDept1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveDept1')}"/>
                     </td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveDept2">Executive Dept2:</label>
+                <tr>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName2', 'errors')}">
+                        <input type="text" id="executiveName2" name="executiveName2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName2')}"/>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle2', 'errors')}">
+                        <input type="text" id="executiveTitle2" name="executiveTitle2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle2')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveDept2', 'errors')}">
                         <input type="text" id="executiveDept2" name="executiveDept2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveDept2')}"/>
                     </td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveDept3">Executive Dept3:</label>
+                <tr>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName3', 'errors')}">
+                        <input type="text" id="executiveName3" name="executiveName3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName3')}"/>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle3', 'errors')}">
+                        <input type="text" id="executiveTitle3" name="executiveTitle3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle3')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveDept3', 'errors')}">
                         <input type="text" id="executiveDept3" name="executiveDept3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveDept3')}"/>
                     </td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveDept4">Executive Dept4:</label>
+                <tr>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName4', 'errors')}">
+                        <input type="text" id="executiveName4" name="executiveName4" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName4')}"/>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle4', 'errors')}">
+                        <input type="text" id="executiveTitle4" name="executiveTitle4" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle4')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveDept4', 'errors')}">
                         <input type="text" id="executiveDept4" name="executiveDept4" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveDept4')}"/>
                     </td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveDept5">Executive Dept5:</label>
+                <tr>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName5', 'errors')}">
+                        <input type="text" id="executiveName5" name="executiveName5" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName5')}"/>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle5', 'errors')}">
+                        <input type="text" id="executiveTitle5" name="executiveTitle5" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle5')}"/>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveDept5', 'errors')}">
                         <input type="text" id="executiveDept5" name="executiveDept5" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveDept5')}"/>
                     </td>
                 </tr>
 
+                </tbody></table></td></tr>
+
+
+                <tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+
+                <tr><td colspan="3" width="300px"><b>Please complete this section so we can contact you if questions arise regarding the information</b></td></tr>
+
                 <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveName1">Executive Name1:</label>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'completedBy', 'errors')}">
+                        <label for="completedBy">Completed By:</label><br><input type="text" id="completedBy" name="completedBy" value="${fieldValue(bean: contactInstance, field: 'completedBy')}"/>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName1', 'errors')}">
-                        <input type="text" id="executiveName1" name="executiveName1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName1')}"/>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'phone', 'errors')}">
+                        <label for="phone">Phone:</label><br><input type="text" id="phone" name="phone" value="${fieldValue(bean: contactInstance, field: 'phone')}"/>
                     </td>
                 </tr>
 
                 <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveName2">Executive Name2:</label>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'title', 'errors')}">
+                        <label for="title">Title:</label><br><input type="text" id="title" name="title" value="${fieldValue(bean: contactInstance, field: 'title')}"/>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName2', 'errors')}">
-                        <input type="text" id="executiveName2" name="executiveName2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName2')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveName3">Executive Name3:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName3', 'errors')}">
-                        <input type="text" id="executiveName3" name="executiveName3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName3')}"/>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'fax', 'errors')}">
+                        <label for="fax">Fax:</label><br><input type="text" id="fax" name="fax" value="${fieldValue(bean: contactInstance, field: 'fax')}"/>
                     </td>
                 </tr>
 
                 <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveName4">Executive Name4:</label>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'email', 'errors')}">
+                        <label for="email">Email:</label><br><input type="text" id="email" name="email" value="${fieldValue(bean: contactInstance, field: 'email')}"/>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName4', 'errors')}">
-                        <input type="text" id="executiveName4" name="executiveName4" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName4')}"/>
-                    </td>
+                    <td></td>
                 </tr>
 
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveName5">Executive Name5:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveName5', 'errors')}">
-                        <input type="text" id="executiveName5" name="executiveName5" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName5')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveTitle1">Executive Title1:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle1', 'errors')}">
-                        <input type="text" id="executiveTitle1" name="executiveTitle1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle1')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveTitle2">Executive Title2:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle2', 'errors')}">
-                        <input type="text" id="executiveTitle2" name="executiveTitle2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle2')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveTitle3">Executive Title3:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle3', 'errors')}">
-                        <input type="text" id="executiveTitle3" name="executiveTitle3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle3')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveTitle4">Executive Title4:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle4', 'errors')}">
-                        <input type="text" id="executiveTitle4" name="executiveTitle4" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle4')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="executiveTitle5">Executive Title5:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveTitle5', 'errors')}">
-                        <input type="text" id="executiveTitle5" name="executiveTitle5" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveTitle5')}"/>
+                <tr><td colspan="3" width="300px">Note: If you are not the appropiate contact to complete this survey at your financial institution, to whom should we send future surveys?</td></tr>
+                <tr>
+                    <td colspan="3">
+                        <table>
+                            <tr>
+                                <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'altName', 'errors')}">
+                                    <label for="altName">Name:</label><br><input type="text" id="altName" name="altName" value="${fieldValue(bean: contactInstance, field: 'altName')}"/>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'altEmail', 'errors')}">
+                                    <label for="altEmail">Email:</label><br><input type="text" id="altEmail" name="altEmail" value="${fieldValue(bean: contactInstance, field: 'altEmail')}"/>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'altPhone', 'errors')}">
+                                    <label for="altPhone">Phone:</label><br><input type="text" id="altPhone" name="altPhone" value="${fieldValue(bean: contactInstance, field: 'altPhone')}"/>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
 

@@ -66,25 +66,23 @@ class CreditCardIssuersController {
     def create = {
         def creditCardIssuersInstance = new CreditCardIssuers()
         creditCardIssuersInstance.properties = params
+        def companyInstance = Company.get(params["company.id"])
+        creditCardIssuersInstance.setCompany(companyInstance)
         return ['creditCardIssuersInstance': creditCardIssuersInstance]
     }
 
     def save = {
-        def companyInstance = new Company(params)
-        companyInstance.setDateCreated(new Date())
-        companyInstance.setLastUpdated(new Date())
-        companyInstance.save()
+        def creditCardIssuersInstance = new CreditCardIssuers(params)
+        creditCardIssuersInstance.setCreateDate(new Date())
+        creditCardIssuersInstance.setUpdateDate(new Date())
 
         def contactInstance = new Contact(params)
         contactInstance.setDateCreated(new Date())
         contactInstance.setLastUpdated(new Date())
         contactInstance.save()
 
-        def creditCardIssuersInstance = new CreditCardIssuers(params)
-        creditCardIssuersInstance.setCreateDate(new Date())
-        creditCardIssuersInstance.setUpdateDate(new Date())
-        creditCardIssuersInstance.setCompany(companyInstance)
         creditCardIssuersInstance.setContact(contactInstance)
+
         if (!creditCardIssuersInstance.hasErrors() && creditCardIssuersInstance.save()) {
             flash.message = "CreditCardIssuers ${creditCardIssuersInstance.id} created"
             redirect(action: show, id: creditCardIssuersInstance.id)
