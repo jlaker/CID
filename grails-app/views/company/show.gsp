@@ -41,19 +41,6 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Answers:</td>
-
-                <td valign="top" style="text-align:left;" class="value">
-                    <ul>
-                        <g:each var="a" in="${companyInstance.answers}">
-                            <li><g:link controller="answer" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
-                        </g:each>
-                    </ul>
-                </td>
-
-            </tr>
-
-            <tr class="prop">
                 <td valign="top" class="name">City:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'city')}</td>
@@ -61,9 +48,9 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Date Created:</td>
+                <td valign="top" class="name">Create Date:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'dateCreated')}</td>
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'createDate')}</td>
 
             </tr>
 
@@ -71,13 +58,6 @@
                 <td valign="top" class="name">Fax:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'fax')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">Last Updated:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'lastUpdated')}</td>
 
             </tr>
 
@@ -110,9 +90,23 @@
             </tr>
 
             <tr class="prop">
+                <td valign="top" class="name">Rssid:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'rssid')}</td>
+
+            </tr>
+
+            <tr class="prop">
                 <td valign="top" class="name">State:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'state')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Update Date:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'updateDate')}</td>
 
             </tr>
 

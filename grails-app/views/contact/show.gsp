@@ -55,9 +55,9 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Date Created:</td>
+                <td valign="top" class="name">Create Date:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'dateCreated')}</td>
+                <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'createDate')}</td>
 
             </tr>
 
@@ -76,13 +76,6 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Last Updated:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'lastUpdated')}</td>
-
-            </tr>
-
-            <tr class="prop">
                 <td valign="top" class="name">Phone:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'phone')}</td>
@@ -93,6 +86,13 @@
                 <td valign="top" class="name">Title:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'title')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Update Date:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: contactInstance, field: 'updateDate')}</td>
 
             </tr>
 

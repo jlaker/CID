@@ -66,7 +66,7 @@ class CreditCardIssuersController {
     def create = {
         def creditCardIssuersInstance = new CreditCardIssuers()
         creditCardIssuersInstance.properties = params
-        def companyInstance = Company.get(params["company.id"])
+        def companyInstance = Company.findByRssid(params["company.rssid"])//Company.get(params["company.id"])
         creditCardIssuersInstance.setCompany(companyInstance)
         return ['creditCardIssuersInstance': creditCardIssuersInstance]
     }
@@ -77,8 +77,8 @@ class CreditCardIssuersController {
         creditCardIssuersInstance.setUpdateDate(new Date())
 
         def contactInstance = new Contact(params)
-        contactInstance.setDateCreated(new Date())
-        contactInstance.setLastUpdated(new Date())
+        contactInstance.setCreateDate(new Date())
+        contactInstance.setUpdateDate(new Date())
         contactInstance.save()
 
         creditCardIssuersInstance.setContact(contactInstance)

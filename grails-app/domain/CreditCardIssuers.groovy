@@ -1,4 +1,5 @@
 class CreditCardIssuers {
+
     Company company
     Contact contact
     String AAtotalOPENcardholderAccounts
@@ -22,25 +23,36 @@ class CreditCardIssuers {
     String AScreditCardTransProcessor
     boolean ATcontactlessCreditCards
     String AUNumcontactlessCreditCards
+    String AUNumcontactlessCreditCardTrans
     String AVtotalChargeVolumeContactlessPurchases
     String AWcontactlessCreditCardBrand1
     String AXcontactlessCreditCardBrand2
     String AYformFactor1
     String AZformFactor2
     String BAformFactor3
-    String executiveName1
+    String executiveFirstName1
+    String executiveLastName1
+    String executiveEmail1
     String executiveTitle1
     String executiveDept1
-    String executiveName2
+    String executiveFirstName2
+    String executiveLastName2
+    String executiveEmail2
     String executiveTitle2
     String executiveDept2
-    String executiveName3
+    String executiveFirstName3
+    String executiveLastName3
+    String executiveEmail3
     String executiveTitle3
     String executiveDept3
-    String executiveName4
+    String executiveFirstName4
+    String executiveLastName4
+    String executiveEmail4
     String executiveTitle4
     String executiveDept4
-    String executiveName5
+    String executiveFirstName5
+    String executiveLastName5
+    String executiveEmail5
     String executiveTitle5
     String executiveDept5
     Date createDate

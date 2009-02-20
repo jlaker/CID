@@ -27,7 +27,7 @@
 
                 <g:sortableColumn property="city" title="City"/>
 
-                <g:sortableColumn property="dateCreated" title="Date Created"/>
+                <g:sortableColumn property="createDate" title="Create Date"/>
 
                 <g:sortableColumn property="fax" title="Fax"/>
 
@@ -45,7 +45,7 @@
 
                     <td>${fieldValue(bean: companyInstance, field: 'city')}</td>
 
-                    <td>${fieldValue(bean: companyInstance, field: 'dateCreated')}</td>
+                    <td>${fieldValue(bean: companyInstance, field: 'createDate')}</td>
 
                     <td>${fieldValue(bean: companyInstance, field: 'fax')}</td>
 

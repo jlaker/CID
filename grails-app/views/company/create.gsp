@@ -53,10 +53,10 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="dateCreated">Date Created:</label>
+                        <label for="createDate">Create Date:</label>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'dateCreated', 'errors')}">
-                        <g:datePicker name="dateCreated" value="${companyInstance?.dateCreated}"></g:datePicker>
+                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'createDate', 'errors')}">
+                        <g:datePicker name="createDate" value="${companyInstance?.createDate}"></g:datePicker>
                     </td>
                 </tr>
 
@@ -66,15 +66,6 @@
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'fax', 'errors')}">
                         <input type="text" id="fax" name="fax" value="${fieldValue(bean: companyInstance, field: 'fax')}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="lastUpdated">Last Updated:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'lastUpdated', 'errors')}">
-                        <g:datePicker name="lastUpdated" value="${companyInstance?.lastUpdated}"></g:datePicker>
                     </td>
                 </tr>
 
@@ -116,10 +107,28 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
+                        <label for="rssid">Rssid:</label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'rssid', 'errors')}">
+                        <input type="text" id="rssid" name="rssid" value="${fieldValue(bean: companyInstance, field: 'rssid')}"/>
+                    </td>
+                </tr>
+
+                <tr class="prop">
+                    <td valign="top" class="name">
                         <label for="state">State:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'state', 'errors')}">
                         <input type="text" id="state" name="state" value="${fieldValue(bean: companyInstance, field: 'state')}"/>
+                    </td>
+                </tr>
+
+                <tr class="prop">
+                    <td valign="top" class="name">
+                        <label for="updateDate">Update Date:</label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: companyInstance, field: 'updateDate', 'errors')}">
+                        <g:datePicker name="updateDate" value="${companyInstance?.updateDate}"></g:datePicker>
                     </td>
                 </tr>
 

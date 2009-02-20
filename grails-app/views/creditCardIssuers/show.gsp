@@ -167,6 +167,13 @@
             </tr>
 
             <tr class="prop">
+                <td valign="top" class="name">AUN umcontactless Credit Card Trans:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'AUNumcontactlessCreditCardTrans')}</td>
+
+            </tr>
+
+            <tr class="prop">
                 <td valign="top" class="name">AUN umcontactless Credit Cards:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'AUNumcontactlessCreditCards')}</td>
@@ -272,37 +279,107 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Executive Name1:</td>
+                <td valign="top" class="name">Executive Email1:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName1')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">Executive Name2:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName2')}</td>
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveEmail1')}</td>
 
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Executive Name3:</td>
+                <td valign="top" class="name">Executive Email2:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName3')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">Executive Name4:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName4')}</td>
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveEmail2')}</td>
 
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Executive Name5:</td>
+                <td valign="top" class="name">Executive Email3:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveName5')}</td>
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveEmail3')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Email4:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveEmail4')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Email5:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveEmail5')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive First Name1:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName1')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive First Name2:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName2')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive First Name3:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName3')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive First Name4:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName4')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive First Name5:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName5')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Last Name1:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveLastName1')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Last Name2:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveLastName2')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Last Name3:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveLastName3')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Last Name4:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveLastName4')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Executive Last Name5:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: creditCardIssuersInstance, field: 'executiveLastName5')}</td>
 
             </tr>
 

@@ -1,5 +1,4 @@
 class Company {
-    static hasMany = [answers:Answer]
     String name
     String address1
     String address2
@@ -11,6 +10,7 @@ class Company {
     String fax
     String parentCompany
     String noOfEmployees
-    Date dateCreated
-    Date lastUpdated
+    String rssid
+    Date createDate
+    Date updateDate
 }

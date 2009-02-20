@@ -7,6 +7,6 @@ class Contact {
     String altName
     String altEmail
     String altPhone
-    Date dateCreated
-    Date lastUpdated
+    Date createDate
+    Date updateDate
 }

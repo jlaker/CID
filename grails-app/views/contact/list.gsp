@@ -29,7 +29,7 @@
 
                 <g:sortableColumn property="completedBy" title="Completed By"/>
 
-                <g:sortableColumn property="dateCreated" title="Date Created"/>
+                <g:sortableColumn property="createDate" title="Create Date"/>
 
             </tr>
             </thead>
@@ -47,7 +47,7 @@
 
                     <td>${fieldValue(bean: contactInstance, field: 'completedBy')}</td>
 
-                    <td>${fieldValue(bean: contactInstance, field: 'dateCreated')}</td>
+                    <td>${fieldValue(bean: contactInstance, field: 'createDate')}</td>
 
                 </tr>
             </g:each>

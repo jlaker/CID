@@ -62,10 +62,10 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="dateCreated">Date Created:</label>
+                        <label for="createDate">Create Date:</label>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'dateCreated', 'errors')}">
-                        <g:datePicker name="dateCreated" value="${contactInstance?.dateCreated}"></g:datePicker>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'createDate', 'errors')}">
+                        <g:datePicker name="createDate" value="${contactInstance?.createDate}"></g:datePicker>
                     </td>
                 </tr>
 
@@ -89,15 +89,6 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="lastUpdated">Last Updated:</label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'lastUpdated', 'errors')}">
-                        <g:datePicker name="lastUpdated" value="${contactInstance?.lastUpdated}"></g:datePicker>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
                         <label for="phone">Phone:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'phone', 'errors')}">
@@ -111,6 +102,15 @@
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'title', 'errors')}">
                         <input type="text" id="title" name="title" value="${fieldValue(bean: contactInstance, field: 'title')}"/>
+                    </td>
+                </tr>
+
+                <tr class="prop">
+                    <td valign="top" class="name">
+                        <label for="updateDate">Update Date:</label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: contactInstance, field: 'updateDate', 'errors')}">
+                        <g:datePicker name="updateDate" value="${contactInstance?.updateDate}"></g:datePicker>
                     </td>
                 </tr>
 
