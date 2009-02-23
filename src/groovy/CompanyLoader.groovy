@@ -12,14 +12,34 @@ import groovy.sql.DataSet;
 public class CompanyLoader {
 
 
-  def sql = Sql.newInstance("jdbc:mysql://localhost:3306/CID", "root", "root", "com.mysql.jdbc.Driver")
-  def ds = DataSet.newInstance('company')
+  static void main(args) {
 
-static void main(args) {
-  def fields = new File('/home/jlaker/Documents/CID Surveys/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
-    fields ->
-    println fields[0] + " " + fields[1] + " " + fields[2]   + " " + fields[3] + " " + fields[4] + " " + fields[5] + " " + fields[6]
+    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/CID", "root", "root", "com.mysql.jdbc.Driver")
+    def ds = sql.dataSet('company')
+    def saved
+
+    def fields = new File('/home/jlaker/Documents/CID Surveys/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
+      fields ->
+
+      def rssid =  fields[6]
+
+     if(rssid != null && rssid != saved){
+      saved = fields[6]
+      ds.add(
+              name: fields[4],
+              rssid: fields[6],
+              version: 0,
+              address1: " ",
+              address2: " ",
+              city: " ",
+              create_date: new Date(),
+              fax: " ",
+              
+      )
+     }
+    }
+
+    ds.each { println it.name }
   }
-}
 
 }
