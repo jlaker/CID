@@ -27,16 +27,16 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Address1:</td>
+                <td valign="top" class="name">Name:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'address1')}</td>
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'name')}</td>
 
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Address2:</td>
+                <td valign="top" class="name">Address1:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'address2')}</td>
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'address1')}</td>
 
             </tr>
 
@@ -48,9 +48,30 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Create Date:</td>
+                <td valign="top" class="name">State:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'createDate')}</td>
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'state')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Zip:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'zip')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Url:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'url')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Phone:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'phone')}</td>
 
             </tr>
 
@@ -62,9 +83,23 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Name:</td>
+                <td valign="top" class="name">Rssid:</td>
 
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'name')}</td>
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'rssid')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Address2:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'address2')}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name">Create Date:</td>
+
+                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'createDate')}</td>
 
             </tr>
 
@@ -83,44 +118,9 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name">Phone:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'phone')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">Rssid:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'rssid')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">State:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'state')}</td>
-
-            </tr>
-
-            <tr class="prop">
                 <td valign="top" class="name">Update Date:</td>
 
                 <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'updateDate')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">Url:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'url')}</td>
-
-            </tr>
-
-            <tr class="prop">
-                <td valign="top" class="name">Zip:</td>
-
-                <td valign="top" class="value">${fieldValue(bean: companyInstance, field: 'zip')}</td>
 
             </tr>
 

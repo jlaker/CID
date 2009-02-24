@@ -13,4 +13,16 @@ class Company {
     String rssid
     Date createDate
     Date updateDate
+
+    static constraints = {
+        name(blank: false)
+        address1(blank: false)
+        city(blank: false)
+        state(blank: false)
+        zip(blank: false)
+        url(blank: false, url: true)
+        phone(blank: false)
+        fax(blank: false)
+        rssid(blank: false)
+    }
 }

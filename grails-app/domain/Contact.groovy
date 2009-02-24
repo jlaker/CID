@@ -9,4 +9,6 @@ class Contact {
     String altPhone
     Date createDate
     Date updateDate
+
+
 }

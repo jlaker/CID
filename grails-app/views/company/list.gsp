@@ -21,15 +21,15 @@
 
                 <g:sortableColumn property="id" title="Id"/>
 
-                <g:sortableColumn property="address1" title="Address1"/>
+                <g:sortableColumn property="name" title="Name"/>
 
-                <g:sortableColumn property="address2" title="Address2"/>
+                <g:sortableColumn property="address1" title="Address1"/>
 
                 <g:sortableColumn property="city" title="City"/>
 
-                <g:sortableColumn property="createDate" title="Create Date"/>
+                <g:sortableColumn property="state" title="State"/>
 
-                <g:sortableColumn property="fax" title="Fax"/>
+                <g:sortableColumn property="zip" title="Zip"/>
 
             </tr>
             </thead>
@@ -39,15 +39,15 @@
 
                     <td><g:link action="show" id="${companyInstance.id}">${fieldValue(bean: companyInstance, field: 'id')}</g:link></td>
 
-                    <td>${fieldValue(bean: companyInstance, field: 'address1')}</td>
+                    <td>${fieldValue(bean: companyInstance, field: 'name')}</td>
 
-                    <td>${fieldValue(bean: companyInstance, field: 'address2')}</td>
+                    <td>${fieldValue(bean: companyInstance, field: 'address1')}</td>
 
                     <td>${fieldValue(bean: companyInstance, field: 'city')}</td>
 
-                    <td>${fieldValue(bean: companyInstance, field: 'createDate')}</td>
+                    <td>${fieldValue(bean: companyInstance, field: 'state')}</td>
 
-                    <td>${fieldValue(bean: companyInstance, field: 'fax')}</td>
+                    <td>${fieldValue(bean: companyInstance, field: 'zip')}</td>
 
                 </tr>
             </g:each>
