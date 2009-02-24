@@ -75,7 +75,7 @@
                                 <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.city', 'errors')}">
                                     <label for="company.city">*City:</label><br><input type="text" id="company.city" name="company.city" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.city')}"/>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'compnay.state', 'errors')}">
+                                <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.state', 'errors')}">
                                     <label for="company.state">*State:</label><br><input type="text" id="company.state" name="company.state" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.state')}"/>
                                 </td>
                             </tr>
