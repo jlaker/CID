@@ -1,0 +1,13 @@
+<plugin name='dbmigrate' version='0.1.5'>
+    <author>Sam Pullara</author>
+    <authorEmail>sam@sampullara.com</authorEmail>
+    <title>Database migration tasks</title>
+    <description>The dbmigrate plugin will allow you to track changes to your database over time and ensure that your
+        database
+        is always up-to-date with the code that is using it.
+    </description>
+    <documentation>http://code.google.com/p/dbmigrate/wiki/Grails</documentation>
+    <resources>
+        <resource>ApplicationBootStrap</resource>
+    </resources>
+</plugin>
