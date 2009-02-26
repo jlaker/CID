@@ -18,7 +18,7 @@ public class CompanyLoader {
     def ds = sql.dataSet('company')
     def saved
 
-    def fields = new File('/home/jlaker/Documents/CID Surveys/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
+    def fields = new File('C:/Documents and Settings/John/My Documents/work/CID/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
       fields ->
 
       def rssid =  fields[6]
@@ -32,9 +32,13 @@ public class CompanyLoader {
               address1: " ",
               address2: " ",
               city: " ",
+              state: " ",
+              zip: " ",
               create_date: new Date(),
+              update_date: new Date(),
               fax: " ",
-              
+              phone: " ",
+              url: " "
       )
      }
     }
