@@ -5,10 +5,6 @@
     <title>Credit Card Issuers Survey</title>
 </head>
 <body>
-<!--<div class="nav">
-    <span class="menuButton"><a class="home" href="${createLinkTo(dir: '')}">Home</a></span>
-    <span class="menuButton"><g:link class="list" action="list">CreditCardIssuers List</g:link></span>
-</div>-->
 <div class="body">
     <h1 align="center"><b>21st Edition</b></h1>
     <center><a href="http://www.cardindustrydirectory.com">www.cardindustrydirectory.com</a></center>
