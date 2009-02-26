@@ -1,0 +1,4 @@
+class ThankYouController {
+
+    def index = { }
+}

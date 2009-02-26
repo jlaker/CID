@@ -142,7 +142,7 @@ class CreditCardIssuersController {
 
             if (!creditCardIssuersInstance.hasErrors() && creditCardIssuersInstance.save()) {
                 flash.message = "CreditCardIssuers ${creditCardIssuersInstance.id} created"
-                redirect(action: show, id: creditCardIssuersInstance.id)
+                redirect(controller: 'thankYou', action: 'index')
             }
             else {
                 render(view: 'create', model: [creditCardIssuersInstance: creditCardIssuersInstance])
