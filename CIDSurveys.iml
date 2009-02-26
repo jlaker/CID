@@ -66,7 +66,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="autobase" />
-              <option name="release" value="0.8.1" />
+              <option name="release" value="0.8.2.1" />
               <option name="title" value="Automate your database work as much as possible" />
             </GrailsPlugin>
           </value>
@@ -111,7 +111,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="bubbling" />
-              <option name="release" value="1.5.0" />
+              <option name="release" value="1.5.1" />
               <option name="title" value="Bubbling Library YUI Extension" />
             </GrailsPlugin>
           </value>
@@ -122,6 +122,15 @@
               <option name="name" value="cache" />
               <option name="release" value="no releases" />
               <option name="title" value="No description available" />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="calendar">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="calendar" />
+              <option name="release" value="1.1.1" />
+              <option name="title" value="Grails Calendar Plugin" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -156,7 +165,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="cometd" />
-              <option name="release" value="0.1.3" />
+              <option name="release" value="0.1.4" />
               <option name="title" value="Enable your Grails application with Comet functions" />
             </GrailsPlugin>
           </value>
@@ -165,8 +174,17 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="compress" />
-              <option name="release" value="0.2" />
+              <option name="release" value="0.3" />
               <option name="title" value="Servlet filter to Compress content." />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="console">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="console" />
+              <option name="release" value="0.1" />
+              <option name="title" value="Web-based Groovy Console for Grails" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -201,7 +219,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="crypto" />
-              <option name="release" value="1.1" />
+              <option name="release" value="1.1.1" />
               <option name="title" value="Encryption plugin for Grails" />
             </GrailsPlugin>
           </value>
@@ -327,7 +345,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="dynamic-jasper" />
-              <option name="release" value="0.2" />
+              <option name="release" value="0.4" />
               <option name="title" value="Integrates DynamicJasper into Grails" />
             </GrailsPlugin>
           </value>
@@ -365,6 +383,15 @@
               <option name="name" value="exchange-rates" />
               <option name="release" value="1.1" />
               <option name="title" value="Foreign currency exchange rates using Yahoo!" />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="export">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="export" />
+              <option name="release" value="0.1" />
+              <option name="title" value="Export functionality" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -444,7 +471,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="fixtures" />
-              <option name="release" value="0.4" />
+              <option name="release" value="0.5" />
               <option name="title" value="fixtures" />
             </GrailsPlugin>
           </value>
@@ -480,7 +507,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="functional-test" />
-              <option name="release" value="1.2.3" />
+              <option name="release" value="1.2.4" />
               <option name="title" value="Functional Testing" />
             </GrailsPlugin>
           </value>
@@ -497,7 +524,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="google-data" />
-              <option name="release" value="0.1" />
+              <option name="release" value="0.1.1" />
               <option name="title" value="Google Data Java Client Library" />
             </GrailsPlugin>
           </value>
@@ -506,7 +533,8 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="grails-ui" />
-              <option name="release" value="1.0.2 (?)" />
+              <option name="release" value="1.0.2" />
+              <option name="title" value="Grails UI" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -532,7 +560,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="h2" />
-              <option name="release" value="0.2.1" />
+              <option name="release" value="0.2.2" />
               <option name="title" value="Provide H2 Database Support" />
             </GrailsPlugin>
           </value>
@@ -559,7 +587,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="i18n-gettext" />
-              <option name="release" value="0.5" />
+              <option name="release" value="0.8" />
               <option name="title" value="I18n gettext plugin for grails" />
             </GrailsPlugin>
           </value>
@@ -570,6 +598,15 @@
               <option name="name" value="i18n-templates" />
               <option name="release" value="1.0.4" />
               <option name="title" value="I18n Templates" />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="image-proxy">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="image-proxy" />
+              <option name="release" value="0.1" />
+              <option name="title" value="Image proxy for downloading images from other places" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -597,6 +634,15 @@
               <option name="name" value="ivy" />
               <option name="release" value="2.0.0-rc1" />
               <option name="title" value="The Ivy Dependency Manager for Grails." />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="iwebkit">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="iwebkit" />
+              <option name="release" value="0.2" />
+              <option name="title" value="iwebkit plugin" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -640,7 +686,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="jbosscache" />
-              <option name="release" value="0.1.2" />
+              <option name="release" value="0.1.4" />
               <option name="title" value="JBossCache Plugin" />
             </GrailsPlugin>
           </value>
@@ -689,12 +735,21 @@
             </GrailsPlugin>
           </value>
         </entry>
+        <entry key="joda-time">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="joda-time" />
+              <option name="release" value="0.1" />
+              <option name="title" value="Joda-Time Plugin" />
+            </GrailsPlugin>
+          </value>
+        </entry>
         <entry key="jpa">
           <value>
             <GrailsPlugin>
               <option name="name" value="jpa" />
-              <option name="release" value="0.1.2" />
-              <option name="title" value="Support standalone JPA usage in Grails without GORM" />
+              <option name="release" value="0.1.5" />
+              <option name="title" value="Provide standalone JPA functions without GORM" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -702,7 +757,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="jquery" />
-              <option name="release" value="1.0RC1" />
+              <option name="release" value="1.0RC2b" />
               <option name="title" value="JQuery for Grails" />
             </GrailsPlugin>
           </value>
@@ -774,7 +829,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="liquibase" />
-              <option name="release" value="1.8.1.0" />
+              <option name="release" value="1.9.1.0" />
               <option name="title" value="LiquiBase Database Refactoring for Grails" />
             </GrailsPlugin>
           </value>
@@ -873,7 +928,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="navigation" />
-              <option name="release" value="1.0" />
+              <option name="release" value="1.0.3" />
               <option name="title" value="Site Menu Navigation" />
             </GrailsPlugin>
           </value>
@@ -932,11 +987,20 @@
             </GrailsPlugin>
           </value>
         </entry>
+        <entry key="pdf">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="pdf" />
+              <option name="release" value="0.3" />
+              <option name="title" value="Provides a simple way to generate PDFs from web pages" />
+            </GrailsPlugin>
+          </value>
+        </entry>
         <entry key="php">
           <value>
             <GrailsPlugin>
               <option name="name" value="php" />
-              <option name="release" value="0.1.2" />
+              <option name="release" value="0.1.3" />
               <option name="title" value="Support PHP in your Grails application with the Quercus PHP engine" />
             </GrailsPlugin>
           </value>
@@ -1019,6 +1083,15 @@
               <option name="name" value="remoting" />
               <option name="release" value="1.0" />
               <option name="title" value="Adds easy-to-use server-side and client-side RPC support." />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="resources-first">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="resources-first" />
+              <option name="release" value="0.2" />
+              <option name="title" value="First match static resources then match UrlMappings" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -1107,7 +1180,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="shopping-cart" />
-              <option name="release" value="0.2" />
+              <option name="release" value="0.3" />
               <option name="title" value="Shopping cart plugin" />
             </GrailsPlugin>
           </value>
@@ -1278,8 +1351,8 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="webdav" />
-              <option name="release" value="no releases" />
-              <option name="title" value="No description available" />
+              <option name="release" value="0.1" />
+              <option name="title" value="Webdav plugin for grails" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -1287,7 +1360,7 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="webtest" />
-              <option name="release" value="0.6" />
+              <option name="release" value="1.1.1" />
               <option name="title" value="A plug-in that provides functional testing for Grails using Canoo Web Test" />
             </GrailsPlugin>
           </value>
@@ -1341,8 +1414,17 @@
           <value>
             <GrailsPlugin>
               <option name="name" value="yui" />
-              <option name="release" value="2.6.0" />
+              <option name="release" value="2.6.1" />
               <option name="title" value="Yahoo! User Interface Library (YUI)" />
+            </GrailsPlugin>
+          </value>
+        </entry>
+        <entry key="yui3">
+          <value>
+            <GrailsPlugin>
+              <option name="name" value="yui3" />
+              <option name="release" value="0.1.4" />
+              <option name="title" value="Provide YUI3 and YUI2 JavaScript Library in an unobstrusive way" />
             </GrailsPlugin>
           </value>
         </entry>
@@ -1359,6 +1441,7 @@
       <sourceFolder url="file://$MODULE_DIR$/grails-app/domain" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/dbmigrate-0.1.5/grails-app/conf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
@@ -1371,10 +1454,12 @@
       <library name="Grails User Library">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="file://$MODULE_DIR$/plugins/dbmigrate-0.1.5/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/plugins/dbmigrate-0.1.5/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
