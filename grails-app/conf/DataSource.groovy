@@ -16,21 +16,29 @@ environments {
             pooled = true
 	        driverClassName = "com.mysql.jdbc.Driver"
 	        username = "root"
-	        password = "1596"
+	        password = "root"
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:mysql://localhost:3306/CID"
+			url = "jdbc:mysql://localhost:3306/cid"
 		}
 	}
 	test {
 		dataSource {
+          pooled = true
+	        driverClassName = "com.mysql.jdbc.Driver"
+	        username = "root"
+	        password = "root"
 			dbCreate = "update"
-			url = "jdbc:hsqldb:mem:testDb"
+			url = "jdbc:mysql://localhost:3306/cid"
 		}
 	}
 	production {
 		dataSource {
-			dbCreate = "update"
-			url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            pooled = true
+	        driverClassName = "com.mysql.jdbc.Driver"
+	        username = "jlaker"
+	        password = "jlaker"
+			dbCreate = "create-drop"
+			url = "jdbc:mysql://11.140.129.17:3306/cid"
 		}
 	}
 }
