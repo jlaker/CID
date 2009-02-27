@@ -5,10 +5,22 @@
     <title>Credit Card Issuers Survey</title>
 </head>
 <body>
+
 <div class="body">
-    <h1 align="center"><b>21st Edition</b></h1>
-    <center><a href="http://www.cardindustrydirectory.com">www.cardindustrydirectory.com</a></center>
-    <h1 align="center"><b>Credit Card Issuers Survey</b></h1>
+    <table border="0px"><tr>
+        <td>
+            <img src="${createLinkTo(dir: 'images', file: 'Sourcemedia.jpg')}" alt="SourceMedia" width=150 height=75>
+        </td>
+        <td>
+
+            <h1 align="center"><b>21st Edition</b></h1>
+            <center><a href="http://www.cardindustrydirectory.com">Card Industry Directory</a></center>
+            <h1 align="center"><b>Credit Card Issuers Survey</b></h1>
+        </td>
+        <td>
+            <img src="${createLinkTo(dir: 'images', file: 'CID.jpg')}" alt="CID" width=150 height=75>
+        </td>
+    </tr></table>
     <g:if test="${flash.message}">
         <div class="message">${flash.message}</div>
     </g:if>
@@ -23,6 +35,7 @@
         </div>
     </g:hasErrors>
     <g:form action="save" method="post">
+
         <input type="hidden" name="company.id" value="${creditCardIssuersInstance?.company?.id}"/>
         <input type="hidden" name="company.rssid" value="${creditCardIssuersInstance?.company?.rssid}"/>
         <div class="dialog">
@@ -30,7 +43,7 @@
                 <tbody>
                 <tr class="prop">
                     <td colspan="3">
-                        <b>This survey starts on February 23rd, 2009. and ends on April 3rd, 2009.</b>
+                        <b>Please complete the survey by April 3rd, 2009.</b>
                     </td>
                 </tr>
                 <tr class="prop">
@@ -40,7 +53,7 @@
                 </tr>
                 <tr class="prop">
                     <td colspan="3">
-                        <b>Please fill out the form below. Fields marked with and asterix (*) are required.</b>
+                        <b>Please fill out the form below. Fields marked with an asterix (*) are required.</b>
                     </td>
                 </tr>
                 <tr class="prop">
@@ -119,7 +132,7 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="ABtotalACTIVEcardholderAccounts">Total ACTIVE cardholder accounts (not cards) at <u>yeat end</u>:</label>
+                        <label for="ABtotalACTIVEcardholderAccounts">Total ACTIVE cardholder accounts (not cards) at <u>year end</u>:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'ABtotalACTIVEcardholderAccounts', 'errors')}">
                         <input type="text" id="ABtotalACTIVEcardholderAccounts" name="ABtotalACTIVEcardholderAccounts" value="${fieldValue(bean: creditCardIssuersInstance, field: 'ABtotalACTIVEcardholderAccounts')}"/>
@@ -155,7 +168,7 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="AFtotalAmericaExpresscardsIssued">Total America Express cards issued:</label>
+                        <label for="AFtotalAmericaExpresscardsIssued">Total American Express cards issued:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AFtotalAmericaExpresscardsIssued', 'errors')}">
                         <input type="text" id="AFtotalAmericaExpresscardsIssued" name="AFtotalAmericaExpresscardsIssued" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AFtotalAmericaExpresscardsIssued')}"/>
@@ -303,7 +316,7 @@
 
                 <tr class="prop">
                     <td class="name">
-                        <label for="AUNumcontactlessCreditCards">Number of contactless credit cards issued:</label>
+                        <label for="AUNumcontactlessCreditCards">Number of contactless credit cards issued in:</label>
                     </td>
                     <td class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AUNumcontactlessCreditCards', 'errors')}">
                         <input type="text" id="AUNumcontactlessCreditCards" name="AUNumcontactlessCreditCards" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AUNumcontactlessCreditCards')}"/>
@@ -312,7 +325,7 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="AUNumcontactlessCreditCardTrans">Total number of contactless credit card transactions:</label>
+                        <label for="AUNumcontactlessCreditCardTrans">Total number of contactless credit card transactions in:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AUNumcontactlessCreditCardTrans', 'errors')}">
                         <input type="text" id="AUNumcontactlessCreditCardTrans" name="AUNumcontactlessCreditCardTrans" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AUNumcontactlessCreditCardTrans')}"/>
@@ -321,7 +334,7 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="AVtotalChargeVolumeContactlessPurchases">Total charge volume (in dollars) of contactless purchases:</label>
+                        <label for="AVtotalChargeVolumeContactlessPurchases">Total charge volume (in dollars) of contactless purchases in:</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'AVtotalChargeVolumeContactlessPurchases', 'errors')}">
                         <input type="text" id="AVtotalChargeVolumeContactlessPurchases" name="AVtotalChargeVolumeContactlessPurchases" value="${fieldValue(bean: creditCardIssuersInstance, field: 'AVtotalChargeVolumeContactlessPurchases')}"/>
@@ -379,12 +392,13 @@
                 <tr class="prop"><td></td><td></td></tr><tr><td></td><td></td></tr>
 
                 <tr align="center">
-                    <td align="center" colspan="3" width="300px"><b>Executives: (Please list your top 5 executives and their titles)</b></td>
+                    <td align="center" colspan="3" width="300px"><b>Executives: (Please list your top 5 executives and their email addresses, titles, and departments)</b></td>
                 </tr>
 
                 <tr><td colspan="3"><table><tbody>
 
                 <tr align="center">
+                    <td></td>
                     <th align="center">First name</th>
                     <th align="center">Last name</th>
                     <th align="center">Email</th>
@@ -393,6 +407,7 @@
                 </tr>
 
                 <tr>
+                    <td align="center">1</td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveFisrtName1', 'errors')}">
                         <input type="text" id="executiveFirstName1" name="executiveFirstName1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName1')}"/>
                     </td>
@@ -411,6 +426,7 @@
                 </tr>
 
                 <tr>
+                    <td align="center">2</td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveFisrtName2', 'errors')}">
                         <input type="text" id="executiveFirstName2" name="executiveFirstName2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName2')}"/>
                     </td>
@@ -429,6 +445,7 @@
                 </tr>
 
                 <tr>
+                    <td align="center">3</td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveFisrtName3', 'errors')}">
                         <input type="text" id="executiveFirstName3" name="executiveFirstName3" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName3')}"/>
                     </td>
@@ -447,6 +464,7 @@
                 </tr>
 
                 <tr>
+                    <td align="center">4</td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveFisrtName4', 'errors')}">
                         <input type="text" id="executiveFirstName4" name="executiveFirstName4" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName4')}"/>
                     </td>
@@ -465,6 +483,7 @@
                 </tr>
 
                 <tr>
+                    <td align="center">5</td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'executiveFisrtName5', 'errors')}">
                         <input type="text" id="executiveFirstName5" name="executiveFirstName5" value="${fieldValue(bean: creditCardIssuersInstance, field: 'executiveFirstName5')}"/>
                     </td>
@@ -536,10 +555,22 @@
                 </tbody>
             </table>
         </div>
-        <div class="buttons">
-            <span class="button"><input class="save" type="submit" value="Submit"/></span>
+        <br>
+        <div align="center">
+            <span class="buttons"><b><input class="save" type="submit" value="Submit"/></b></span>
         </div>
     </g:form>
 </div>
+<img src="${createLinkTo(dir: 'images', file: 'AmericanBanker.jpg')}" alt="American Banker" width=150 height=75>
+<br><img src="${createLinkTo(dir: 'images', file: 'atmDebitnews.jpg')}" alt="atm debit News" width=100 height=75>
+<br><img src="${createLinkTo(dir: 'images', file: 'btn.jpg')}" alt="btn" width=75 height=75>
+<br><br><img src="${createLinkTo(dir: 'images', file: 'CardLine.jpg')}" alt="Card Line" width=200 height=75>
+<br><br><img src="${createLinkTo(dir: 'images', file: 'CardLineG.jpg')}" alt="Card Line Global" width=150 height=75>
+<br><br><img src="${createLinkTo(dir: 'images', file: 'CardsPayments.jpg')}" alt="Cards Payments" width=200 height=75>
+<br><br><img src="${createLinkTo(dir: 'images', file: 'CollectionCreditRisk.jpg')}" alt="Collection Credit Risk" width=150 height=75>
+<br><br><img src="${createLinkTo(dir: 'images', file: 'ISOAgent.jpg')}" alt="ISO Agent" width=150 height=75>
+<br><br><img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="Payments Source" width=150 height=75>
+<br><img src="${createLinkTo(dir: 'images', file: 'USBanker.jpg')}" alt="US Banker" width=150 height=75>
+
 </body>
 </html>
