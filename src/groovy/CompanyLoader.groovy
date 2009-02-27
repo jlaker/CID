@@ -7,7 +7,7 @@
  */
 
 import groovy.sql.Sql;
-import groovy.sql.DataSet;
+
 
 public class CompanyLoader {
 
