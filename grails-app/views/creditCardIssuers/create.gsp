@@ -302,10 +302,10 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="ATcontactlessCreditCards">Do you issue contactless credit cards?</label>
+                        <label for="ATcontactlessCreditCards">Do you issue contactless credit cards? Yes/No</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'ATcontactlessCreditCards', 'errors')}">
-                        <g:checkBox name="ATcontactlessCreditCards" value="${creditCardIssuersInstance?.ATcontactlessCreditCards}"></g:checkBox>
+                        <g:checkBox name="ATcontactlessCreditCards" value="${creditCardIssuersInstance?.ATcontactlessCreditCards}"></g:checkBox> Check if 'Yes' else leave blank.
                     </td>
                 </tr>
 
