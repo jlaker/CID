@@ -51,7 +51,6 @@
       </facet-type>
     </autodetection-disabled>
   </component>
-  <component name="GrailsPluginsStorage" />
   <component name="IdProvider" IDEtalkID="6F27DF9760650E6AD183B6BCE70918C0" />
   <component name="InspectionProjectProfileManager">
     <option name="PROJECT_PROFILE" value="Project Default" />
@@ -258,7 +257,6 @@
       </map>
     </option>
     <option name="myVersion" value="124" />
-    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
