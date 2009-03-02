@@ -5,7 +5,18 @@
     <title>Credit Card Issuers Survey</title>
 </head>
 <body>
-
+<div class="floatRight">
+    <img src="${createLinkTo(dir: 'images', file: 'AmericanBanker.jpg')}" alt="American Banker" width=150 height=75>
+    <br><img src="${createLinkTo(dir: 'images', file: 'atmDebitnews.jpg')}" alt="atm debit News" width=100 height=75>
+    <br><img src="${createLinkTo(dir: 'images', file: 'btn.jpg')}" alt="btn" width=75 height=75>
+    <br><br><img src="${createLinkTo(dir: 'images', file: 'CardLine.jpg')}" alt="Card Line" width=200 height=75>
+    <br><br><img src="${createLinkTo(dir: 'images', file: 'CardLineG.jpg')}" alt="Card Line Global" width=150 height=75>
+    <br><br><img src="${createLinkTo(dir: 'images', file: 'CardsPayments.jpg')}" alt="Cards Payments" width=200 height=75>
+    <br><br><img src="${createLinkTo(dir: 'images', file: 'CollectionCreditRisk.jpg')}" alt="Collection Credit Risk" width=150 height=75>
+    <br><br><img src="${createLinkTo(dir: 'images', file: 'ISOAgent.jpg')}" alt="ISO Agent" width=150 height=75>
+    <br><br><img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="Payments Source" width=150 height=75>
+    <br><img src="${createLinkTo(dir: 'images', file: 'USBanker.jpg')}" alt="US Banker" width=150 height=75>
+</div>
 <div class="body">
     <table border="0px"><tr>
         <td>
@@ -73,10 +84,10 @@
 
                             <tr class="prop">
                                 <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.address1', 'errors')}">
-                                    <label for="company.address1">*Address1:</label><br><input type="text" id="company.address1" name="company.address1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.address1')}"/>
+                                    <label for="company.address1">*Address Line 1:</label><br><input type="text" id="company.address1" name="company.address1" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.address1')}"/>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.address2', 'errors')}">
-                                    <label for="company.address2">Address2:</label><br><input type="text" id="company.address2" name="company.address2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.address2')}"/>
+                                    <label for="company.address2">Address Line 2:</label><br><input type="text" id="company.address2" name="company.address2" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.address2')}"/>
                                 </td>
                             </tr>
 
@@ -108,7 +119,7 @@
                                     <label for="company.noOfEmployees">No Of Employees:</label><br><input type="text" id="company.noOfEmployees" name="company.noOfEmployees" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.noOfEmployees')}"/>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.url', 'errors')}">
-                                    <label for="company.url">*Url:</label><br><input type="text" id="company.url" name="company.url" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.url')}"/>
+                                    <label for="company.url">*Url:</label><br><input type="text" id="company.url" name="company.url" value="${fieldValue(bean: creditCardIssuersInstance, field: 'company.url')}"/> <br>example: http://www.yourdomain.com
                                 </td>
                             </tr>
                             </tbody>
@@ -559,18 +570,9 @@
         <div align="center">
             <span class="buttons"><b><input class="save" type="submit" value="Submit"/></b></span>
         </div>
+
     </g:form>
 </div>
-<img src="${createLinkTo(dir: 'images', file: 'AmericanBanker.jpg')}" alt="American Banker" width=150 height=75>
-<br><img src="${createLinkTo(dir: 'images', file: 'atmDebitnews.jpg')}" alt="atm debit News" width=100 height=75>
-<br><img src="${createLinkTo(dir: 'images', file: 'btn.jpg')}" alt="btn" width=75 height=75>
-<br><br><img src="${createLinkTo(dir: 'images', file: 'CardLine.jpg')}" alt="Card Line" width=200 height=75>
-<br><br><img src="${createLinkTo(dir: 'images', file: 'CardLineG.jpg')}" alt="Card Line Global" width=150 height=75>
-<br><br><img src="${createLinkTo(dir: 'images', file: 'CardsPayments.jpg')}" alt="Cards Payments" width=200 height=75>
-<br><br><img src="${createLinkTo(dir: 'images', file: 'CollectionCreditRisk.jpg')}" alt="Collection Credit Risk" width=150 height=75>
-<br><br><img src="${createLinkTo(dir: 'images', file: 'ISOAgent.jpg')}" alt="ISO Agent" width=150 height=75>
-<br><br><img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="Payments Source" width=150 height=75>
-<br><img src="${createLinkTo(dir: 'images', file: 'USBanker.jpg')}" alt="US Banker" width=150 height=75>
 
 </body>
 </html>

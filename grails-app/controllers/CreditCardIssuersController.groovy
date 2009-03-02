@@ -78,47 +78,47 @@ class CreditCardIssuersController {
         creditCardIssuersInstance.setCreateDate(new Date())
         creditCardIssuersInstance.setUpdateDate(new Date())
 
-        if (params['contact.completedBy'].equals('') || params['contact.title'].equals('') || params['contact.email'].equals('') || params['contact.phone'].equals('') || params['contact.fax'].equals('') || params['company.name'].equals('') || params['company.address1'].equals('') || params['company.city'].equals('') || params['company.state'].equals('') || params['company.zip'].equals('') || params['company.url'].equals('') || params['company.rssid'].equals('') || params['company.phone'].equals('') || params['company.fax'].equals('')) {
-            if (params['contact.completedBy'].equals('')) {
+        if (params['contact.completedBy'].toString().trim().equals('') || params['contact.title'].toString().trim().equals('') || params['contact.email'].toString().trim().equals('') || params['contact.phone'].toString().trim().equals('') || params['contact.fax'].toString().trim().equals('') || params['company.name'].toString().trim().equals('') || params['company.address1'].toString().trim().equals('') || params['company.city'].toString().trim().equals('') || params['company.state'].toString().trim().equals('') || params['company.zip'].toString().trim().equals('') || params['company.url'].toString().trim().equals('') || params['company.rssid'].toString().trim().equals('') || params['company.phone'].toString().trim().equals('') || params['company.fax'].toString().trim().equals('')) {
+            if (params['contact.completedBy'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('contact.completedBy', null, 'Completed By is a required field.')
             }
-            if (params['contact.title'].equals('')) {
+            if (params['contact.title'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('contact.title', null, 'Title is a required field.')
             }
-            if (params['contact.email'].equals('')) {
+            if (params['contact.email'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('contact.email', null, 'Email is a required field.')
             }
-            if (params['contact.phone'].equals('')) {
+            if (params['contact.phone'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('contact.phone', null, 'Phone is a required field.')
             }
-            if (params['contact.fax'].equals('')) {
+            if (params['contact.fax'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('contact.fax', null, 'Fax is a required field.')
             }
-            if (params['company.name'].equals('')) {
+            if (params['company.name'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.name', null, 'Company is a required field.')
             }
-            if (params['company.address1'].equals('')) {
+            if (params['company.address1'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.address1', null, 'Address1 is a required field.')
             }
-            if (params['company.city'].equals('')) {
+            if (params['company.city'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.city', null, 'City is a required field.')
             }
-            if (params['company.state'].equals('')) {
+            if (params['company.state'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.state', null, 'State is a required field.')
             }
-            if (params['company.zip'].equals('')) {
+            if (params['company.zip'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.zip', null, 'Zip is a required field.')
             }
-            if (params['company.url'].equals('')) {
+            if (params['company.url'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.url', null, 'Url is a required field.')
             }
-            if (params['company.rssid'].equals('')) {
+            if (params['company.rssid'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.rssid', null, 'RSSID is a required field.')
             }
-            if (params['company.phone'].equals('')) {
+            if (params['company.phone'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.phone', null, 'Phone is a required field.')
             }
-            if (params['company.fax'].equals('')) {
+            if (params['company.fax'].toString().trim().equals('')) {
                 creditCardIssuersInstance.errors.rejectValue('company.fax', null, 'Fax is a required field.')
             }
             render(view: 'create', model: [creditCardIssuersInstance: creditCardIssuersInstance])
