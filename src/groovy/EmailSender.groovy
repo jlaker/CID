@@ -7,67 +7,52 @@
  */
 
 import groovy.text.GStringTemplateEngine
+import groovy.text.Template
+import groovy.text.SimpleTemplateEngine
+import org.springframework.mail.MailException
+
 
 public class EmailSender {
 
 
   static void main(args) {
 
-    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/cid", "root", "root", "com.mysql.jdbc.Driver")
-    def ds = sql.dataSet('company')
-    def saved
-    def company
+    //def sql = Sql.newInstance("jdbc:mysql://localhost:3306/cid", "root", "root", "com.mysql.jdbc.Driver")
+    //def ds = sql.dataSet('company')
+    //def saved
+    //def company
 
-    ant = new AntBuilder()
-    ant.mail()
-    def f = new File('email.template')
-    def engine = new GStringTemplateEngine()
-    def binding = ["firstname":"Sam", "lastname":"Pullara"]    
-    template = engine.createTemplate(f).make(binding)
-    println template.toString()
+    def f = new File('/home/jlaker/workspaces/CidSurvey/src/groovy/email.template')
+    def engine = new SimpleTemplateEngine()
 
     def fields = new File('/home/jlaker/Documents/CID Surveys/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
       fields ->
 
+      def type = fields[5]
       def rssid = fields[6]
+      def emailAddress = fields[3]
 
-      if (rssid != null && rssid != saved) {
-        saved = fields[6]
-        company = new Company(
-                name: fields[4],
-                rssid: fields[6],
-                address1: " ",
-                address2: " ",
-                city: " ",
-                state: " ",
-                zip: " ",
-                createDate: new Date(),
-                updateDate: new Date(),
-                fax: " "
-        )
-        company.save()
+      if (rssid != null && emailAddress != null && type == "Credit Card") {
 
-        /*
-        ds.add(
-                name: fields[4],
-                rssid: fields[6],
-                version: 0,
-                address1: " ",
-                address2: " ",
-                city: " ",
-                state: " ",
-                zip: " ",
-                create_date: new Date(),
-                update_date: new Date(),
-                fax: " ",
-                phone: " ",
-                url: " "
-        )
-        */
+        //def binding = ["firstname":fields[2], "lastname":fields[1], "rssid":rssid]
+        def binding = ["firstname": "John", "lastname": "Laker", "rssid": "1234"]
+        def template = engine.createTemplate(f).make(binding)
+        def body = template.toString()
+
+        def email = [
+                to: ["john.laker@sourcemedia.com"], // "to" expects a List
+                subject: "Test Email",
+                text: body
+        ]
+
+        try {
+          def emailerService = Emailer
+          emailerService.sendEmail(email)
+        } catch (MailException ex) {
+          log.error("Failed to send emails", ex)
+        }
       }
     }
-
-    ds.each { println it.name }
   }
 
 }

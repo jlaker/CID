@@ -18,6 +18,7 @@ class Company {
     static constraints = {
         name(blank: false)
         address1(blank: false)
+        address2(nullable: true)
         city(blank: false)
         state(blank: false)
         zip(blank: false)

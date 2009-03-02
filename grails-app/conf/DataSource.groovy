@@ -25,10 +25,11 @@ environments {
 		dataSource {
           pooled = true
 	        driverClassName = "com.mysql.jdbc.Driver"
-	        username = "root"
-	        password = "root"
+	        username = "jlaker"
+	        password = "jlaker"
 			dbCreate = "update"
-			url = "jdbc:mysql://localhost:3306/cid"
+			url = "jdbc:mysql://11.140.129.17:3306/cid"
+            logSql = true
 		}
 	}
 	production {
@@ -37,7 +38,7 @@ environments {
 	        driverClassName = "com.mysql.jdbc.Driver"
 	        username = "jlaker"
 	        password = "jlaker"
-			dbCreate = "create-drop"
+			dbCreate = "update"
 			url = "jdbc:mysql://11.140.129.17:3306/cid"
 		}
 	}
