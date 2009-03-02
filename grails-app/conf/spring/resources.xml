@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <bean id="mailPropertiesBean" class="com.sourcemedia.cid.MailPropertiesBean">
+        <property name="from" value="CIDSurvey@SourceMedia.com"/>
+    </bean>
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="mta.sourcemedia.com"/>
+    </bean>
+
+    <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">
+        <property name="from">
+            <value>CIDSurvey@SourceMedia.com</value>
+        </property>
+    </bean>
+
+</beans>
