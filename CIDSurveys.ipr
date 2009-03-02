@@ -30,6 +30,9 @@
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
   </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
+  </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
@@ -40,6 +43,7 @@
         <modules>
           <module name="CIDSurveys">
             <files>
+              <file url="file://$PROJECT_DIR$/grails-app/conf/spring/resources.xml" />
               <file url="file://$PROJECT_DIR$/web-app/WEB-INF/applicationContext.xml" />
             </files>
           </module>
@@ -47,6 +51,7 @@
       </facet-type>
     </autodetection-disabled>
   </component>
+  <component name="GrailsPluginsStorage" />
   <component name="IdProvider" IDEtalkID="6F27DF9760650E6AD183B6BCE70918C0" />
   <component name="InspectionProjectProfileManager">
     <option name="PROJECT_PROFILE" value="Project Default" />
@@ -209,6 +214,9 @@
     <option name="projectName" value="CIDSurveys" />
   </component>
   <component name="ProjectFileVersion" converted="true" />
+  <component name="ProjectKey">
+    <option name="state" value="http://svn.sourcemedia.com:8098/svn/repository/projects/CID/trunk/CIDSurveys.ipr" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CIDSurveys.iml" filepath="$PROJECT_DIR$/CIDSurveys.iml" />
@@ -250,6 +258,7 @@
       </map>
     </option>
     <option name="myVersion" value="124" />
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
