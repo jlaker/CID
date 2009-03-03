@@ -5,7 +5,7 @@
     <title>Credit Card Issuers Survey</title>
 </head>
 <body>
-<div class="floatRight">
+<!--<div class="floatRight">
     <img src="${createLinkTo(dir: 'images', file: 'AmericanBanker.jpg')}" alt="American Banker" width=150 height=75>
     <br><img src="${createLinkTo(dir: 'images', file: 'atmDebitnews.jpg')}" alt="atm debit News" width=100 height=75>
     <br><img src="${createLinkTo(dir: 'images', file: 'btn.jpg')}" alt="btn" width=75 height=75>
@@ -16,7 +16,7 @@
     <br><br><img src="${createLinkTo(dir: 'images', file: 'ISOAgent.jpg')}" alt="ISO Agent" width=150 height=75>
     <br><br><img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="Payments Source" width=150 height=75>
     <br><img src="${createLinkTo(dir: 'images', file: 'USBanker.jpg')}" alt="US Banker" width=150 height=75>
-</div>
+</div>-->
 <div class="body">
     <table border="0px"><tr>
         <td>
@@ -24,12 +24,12 @@
         </td>
         <td>
 
-            <h1 align="center"><b>21st Edition</b></h1>
-            <center><a href="http://www.cardindustrydirectory.com">Card Industry Directory</a></center>
+            <!--<h1 align="center"><b>21st Edition</b></h1>-->
+            <!--<center><a href="http://www.cardindustrydirectory.com">Card Industry Directory</a></center>-->
             <h1 align="center"><b>Credit Card Issuers Survey</b></h1>
         </td>
         <td>
-            <img src="${createLinkTo(dir: 'images', file: 'CID.jpg')}" alt="CID" width=150 height=75>
+            <img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="Payments Source" width=150 height=75>
         </td>
     </tr></table>
     <g:if test="${flash.message}">
