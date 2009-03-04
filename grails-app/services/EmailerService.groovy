@@ -27,7 +27,7 @@ class EmailerService {
   def sendEmail(mail) throws MailException {
      mailSender = new JavaMailSenderImpl("host": "mailgw.sourcemedia.com")
     //MimeMessage mimeMessage = mailSender.createMimeMessage()
-    SimpleMailMessage message = new SimpleMailMessage("from": "CIDSurvey@SourceMedia.com")
+    SimpleMailMessage message = new SimpleMailMessage("from": "datainfo@sourmedia.com")
 
     //MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "ISO-8859-1");
     /*
@@ -39,6 +39,7 @@ class EmailerService {
     if (mail.cc) helper.setCc(getInternetAddresses(mail.cc));
     */
     message.to = getInternetAddresses(mail.to)
+    message.bcc = ["john.laker@sourcemedia.com"]
     message.text = mail.text
     message.subject = mail.subject
 

@@ -11,20 +11,25 @@
             <tbody>
             <tr>
                 <td>
-                    <img src="${createLinkTo(dir: 'images', file: 'CID.jpg')}" alt="CID">
+                    <img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="CID">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Thank you for taking the time to participate and complete our survey in order to help us compile the 21st Edition of the Card Industry Directory, the annual, comprehensive guide to the North American Payment Industry.<br><br>
-                        Please let us know if you have any questions by calling us on 312-983-6121 or emailing us at:<br><a href="mailto:CidSurvey@SourceMedia.com">CidSurvey@SourceMedia.com</a></p>
+                    <p>Thank you for taking the time to participate and complete our survey for the Payments industry’s
+                    largest online repository of data.</p>
+
+                    <p>Please let us know if you have any questions by calling us on 312-983-6121 or emailing us at:
+                      <br><a href="mailto:datainfo@SourceMedia.com">datainfo@SourceMedia.com</a></p>
                 </td>
             </tr>
             <tr>
                 <td>
                     Sincerely,<br>
                     <img src="${createLinkTo(dir: 'images', file: 'AndrewRoweSig.jpg')}" alt="AndrewRowe"><br>
-                    Andrew Rowe<br>Publisher
+                    Andrew Rowe<br>
+                  Publisher – Payments Group<br>
+                  SourceMedia
                 </td>
             </tr>
             </tbody>

@@ -5,7 +5,7 @@ class Company {
     String city
     String state
     String zip
-    URL url
+    String url
     String phone
     String fax
     String parentCompany

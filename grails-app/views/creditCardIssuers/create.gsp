@@ -59,7 +59,7 @@
                 </tr>
                 <tr class="prop">
                     <td colspan="3">
-                        Email us at CidSurvey@SourceMedia.com with any questions or comments
+                        Email us at <a href="mailto:datainfo@SourceMedia.com">datainfo@SourceMedia.com</a> with any questions or comments
                     </td>
                 </tr>
                 <tr class="prop">
@@ -75,7 +75,7 @@
                             <tr class="prop"><td colspan="2"><b>Company Information</b></td></tr>
                             <tr class="prop">
                                 <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.name', 'errors')}">
-                                    <label for="company.name">*Company:</label><br><input type="text" id="company.name" name="company.name" value="${creditCardIssuersInstance?.company?.name}" readonly="readonly"/><!--fieldValue(bean: creditCardIssuersInstance, field: 'name')-->
+                                    <label>Company:</label><br>${creditCardIssuersInstance?.company?.name}<!--fieldValue(bean: creditCardIssuersInstance, field: 'name')-->
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: creditCardIssuersInstance, field: 'company.parentCompany', 'errors')}">
                                     <label for="company.parentCompany">Parent Company:</label><br><input type="text" id="company.parentCompany" name="company.parentCompany" value="${creditCardIssuersInstance?.company?.parentCompany}"/><!--fieldValue(bean: creditCardIssuersInstance, field: 'parentCompany') -->
