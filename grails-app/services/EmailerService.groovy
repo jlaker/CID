@@ -25,9 +25,9 @@ class EmailerService {
 // If next line is commented in, this service fails to be loaded by grails, as every grails-artefact already has a 'log' property // Logger log = Logger.getLogger(this.class.name)
 
   def sendEmail(mail) throws MailException {
-     mailSender = new JavaMailSenderImpl("host": "mailgw.sourcemedia.com")
+     mailSender = new JavaMailSenderImpl("host": "localhost")
     //MimeMessage mimeMessage = mailSender.createMimeMessage()
-    SimpleMailMessage message = new SimpleMailMessage("from": "datainfo@sourmedia.com")
+    SimpleMailMessage message = new SimpleMailMessage("from": "datainfo@sourcemedia.com")
 
     //MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "ISO-8859-1");
     /*
@@ -39,7 +39,7 @@ class EmailerService {
     if (mail.cc) helper.setCc(getInternetAddresses(mail.cc));
     */
     message.to = getInternetAddresses(mail.to)
-    message.bcc = ["john.laker@sourcemedia.com"]
+    //message.bcc = ["john.laker@sourcemedia.com"]
     message.text = mail.text
     message.subject = mail.subject
 

@@ -7,9 +7,10 @@ class EmailerServiceTests extends GroovyTestCase {
 
     def f = new File('/home/jlaker/workspaces/CidSurvey/src/groovy/email.template')
     def engine = new SimpleTemplateEngine()
+    def cnt = 0
 
     //def fields = new File('/home/jlaker/Documents/CID Surveys/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
-    def fields = new File('/home/jlaker/Documents/CID Surveys/CID_test_email.csv').splitEachLine(',') {  
+    def fields = new File('/home/jlaker/Documents/CID Surveys/CreditCard_survey6.csv').splitEachLine(',') {  
       fields ->
 
       def type = fields[5]
@@ -25,18 +26,21 @@ class EmailerServiceTests extends GroovyTestCase {
 
         def email = [
                 to: [emailAddress], // "to" expects a List
-                subject: "PaymentsSource Listing Survey - Test Email",
+                subject: "PaymentsSource Listing Survey",
                 text: body
         ]
 
         try {
           def emailerService = new EmailerService()
           emailerService.sendEmail(email)
+          cnt++
+          println(cnt + "- sent to " + emailAddress)
         } catch (MailException ex) {
+          println("!!!error sending to " + emailAddress)
           log.error("Failed to send emails", ex)
         }
       }
     }
-
+     println("Total sent: " + cnt)
   }
 }
