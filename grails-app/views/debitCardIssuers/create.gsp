@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -7,12 +5,22 @@
     <title>Debit Card Issuers Survey</title>
 </head>
 <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">DebitCardIssuers List</g:link></span>
-        </div>
         <div class="body">
-            <h1>Create DebitCardIssuers</h1>
+            <div class="body">
+    <table border="0px"><tr>
+        <td>
+            <img src="${createLinkTo(dir: 'images', file: 'Sourcemedia.jpg')}" alt="SourceMedia" width=150 height=75>
+        </td>
+        <td>
+
+            <!--<h1 align="center"><b>21st Edition</b></h1>-->
+            <!--<center><a href="http://www.cardindustrydirectory.com">Card Industry Directory</a></center>-->
+            <h1 align="center"><strong>Debit Card Issuers Survey</strong></h1>
+        </td>
+        <td>
+            <img src="${createLinkTo(dir: 'images', file: 'PaymentsSource.jpg')}" alt="Payments Source" width=150 height=75>
+        </td>
+    </tr></table>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
