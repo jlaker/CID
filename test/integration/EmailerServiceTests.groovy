@@ -10,14 +10,14 @@ class EmailerServiceTests extends GroovyTestCase {
     def cnt = 0
 
     //def fields = new File('/home/jlaker/Documents/CID Surveys/Survey+Email_Addresses+02-11-09.csv').splitEachLine(',') {
-    def fields = new File('/home/jlaker/Documents/CID Surveys/CreditCard_survey6.csv').splitEachLine(',') {  
+    def fields = new File('/home/jlaker/Documents/CID Surveys/DebitCard_Survey2.csv').splitEachLine(',') {
       fields ->
 
       def type = fields[5]
       def rssid = fields[6]
       def emailAddress = fields[3]
 
-      if (rssid != null && emailAddress != null && emailAddress != "" && type == "Credit Card") {
+      if (rssid != null && emailAddress != null && emailAddress != "" && type == "Debit Card") {
 
         def binding = ["firstname":fields[2], "lastname":fields[1], "rssid":rssid]
         //def binding = ["firstname": "John", "lastname": "Laker", "rssid": "1234"]

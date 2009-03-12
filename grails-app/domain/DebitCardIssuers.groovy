@@ -1,6 +1,10 @@
 class DebitCardIssuers {
   Company company
   Contact contact
+  String debitContact
+  String atmContact
+  String debitContactPhone
+  String atmContactPhone
   //Debit Card
   String totalDebitCardsIssued
   String numSignatureDebitCards
