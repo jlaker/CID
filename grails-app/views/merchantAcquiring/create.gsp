@@ -183,7 +183,7 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="numDebitTrans">&nbsp;&nbsp;b) Number of debit transactions: (sum of i + ii)</label>
+                        <label for="numDebitTrans">&nbsp;&nbsp;b) Number of debit transactions: (sum of i + ii below)</label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: merchantAcquiringInstance, field: 'numDebitTrans', 'errors')}">
                         <input type="text" id="numDebitTrans" name="numDebitTrans" value="${fieldValue(bean: merchantAcquiringInstance, field: 'numDebitTrans')}"/>
