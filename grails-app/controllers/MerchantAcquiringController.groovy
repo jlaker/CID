@@ -141,7 +141,7 @@ class MerchantAcquiringController {
 
             if (!merchantAcquiringInstance.hasErrors() && merchantAcquiringInstance.save()) {
                 flash.message = "MerchantAcquiring ${merchantAcquiringInstance.id} created"
-                redirect(action: show, id: merchantAcquiringInstance.id)
+                redirect(controller: 'thankYou', action: 'index')
             }
             else {
                 render(view: 'create', model: [merchantAcquiringInstance: merchantAcquiringInstance])
